@@ -96,7 +96,6 @@ router.get("/api/posts/:id/comments", async (req, res) => {
 
 router.put("/api/posts/:id", async (req, res) => {
   try {
-    // const post = await Utils.update(req.params.id, req.params.body);
     const post = await Utils.findById(req.params.id);
 
     if (post[0].id) {
